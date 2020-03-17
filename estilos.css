@@ -1,0 +1,160 @@
+@media  (min-device-width:0px) and  (max-device-width:1400px)  {
+
+html{
+	zoom: 85%;
+	
+}
+
+#histograma2{
+	height: 500px;
+	width:400px;
+	padding-top: 120px;
+	margin: auto;
+	float:left;
+	padding-left: 50px;
+
+
+}
+}
+
+@media  (min-device-width:1400px)   {
+
+html{
+	zoom: 120%;
+	
+	
+}
+
+#histograma2{
+	height: 500px;
+	width:400px;
+	padding-top: 120px;
+	margin: auto;
+	float:left;
+	padding-left: 70px;
+}
+
+#div_map{
+	padding-left: 80px;
+}
+}
+
+
+div.inputs{
+	width:500px;
+	height: 30px;
+	
+}
+
+area :hover{
+	border-color: #aa0000;
+	background-color: #aa0000;
+	
+}
+	
+#ciudad {	
+	font-size:30px;
+	color:#3700a5 ;
+	font-style:bold;
+	margin: 0;
+}
+
+h2.tit_prov{
+	font-size:30px;
+	color:#3700a5 ;
+	width: auto;
+}
+h2.tit_nac{
+	font-size:30px;
+	color:#3700a5 ;
+	width: auto;
+}
+.fechas{
+	font-size:20px;
+	color:#002288;
+}
+
+.contenedor{
+	
+
+}
+.inputs{
+	margin-left: 20px;
+
+}
+section{
+	width:50%;
+}
+
+#s_prov{
+/*	background-color: #ff0000;*/
+	float:left;
+	
+	
+	
+}
+
+#s_nac{
+	background-color: #55ffff;
+	float:left;
+	
+}
+
+#histograma1{
+	width: 100%;
+}
+
+#div_map{
+	float:left;
+}
+options{
+	border: 0px
+}
+.table2{
+	border: 1px solid #000;
+	width: 250px;
+	font-size:20px;
+	font-style: bold;
+	text-align: center;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+ .td2{
+	border: 2px solid #000;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+text{
+	font-size: 12px;
+	
+}
+
+#h2_g{
+	width: auto;
+	text-align: center;
+}
+
+#tit_prov{
+	width: auto;
+	color: black;
+	text-align: center;
+}
+
+#div_map{
+	float:left;
+}
+
+
+
+#tit_h2{
+	
+	text-align: center;
+}
+	
+
+
+
+
+
+
