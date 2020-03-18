@@ -167,6 +167,9 @@ function getGrafProvincia(p){
 	
 //limpiamos el panel de dibujo
 	$("#histograma1").empty();
+//asginamos titulo al gráfico
+ document.getElementById("histograma1").innerHTML = '<h2 id="h2_g" >' +getNombre(provincia) + " (Tasa de Natalidad por cada 1000 habitantes)</h2>";
+ 
 	var svg = d3.select("#histograma1")
       .append('svg')
       .attr("width",w)
@@ -232,8 +235,7 @@ function getGrafProvincia(p){
 //pintamos eje de coordenadas
   pintar_eje_grafDetalle(values,svg,h);
   
-//asginamos titulo al gráfico
- document.getElementById("h2_g").innerHTML = "  "+getNombre(provincia) + " (Tasa de Natalidad por cada 1000 habitantes)";
+
   window.scrollTo(0,700);
 }
 
@@ -269,6 +271,9 @@ function getGrafComparativa(){
 	
 	//limpiamos el panel de dibujo
 	$("#histograma1").empty();
+	//asginamos titulo al gráfico
+ document.getElementById("histograma1").innerHTML = '<h2 id="h2_g" >' + getNombre(provincia) + " (Tasa de Natalidad por cada 1000 habitantes)</h2>";
+ 
 //Instanciamos un objeto SVG
 	var svg = d3.select("#histograma1")
       .append('svg')
@@ -361,9 +366,7 @@ function getGrafComparativa(){
 //pintamos eje de coordenadas
   pintar_eje_grafDetalle(values,svg,h);
   
-//asginamos titulo al gráfico
- document.getElementById("h2_g").innerHTML = "Comparativa: España - "+getNombre(provincia) + " (Tasa de Natalidad por cada 1000 habitantes)";
- 
+
 
 }
 

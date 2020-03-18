@@ -40,18 +40,8 @@ html{
 }
 
 
-div.inputs{
-	width:500px;
-	height: 30px;
-	
-}
+/*Titulo de la ciudad dinamico y area de mapa  */
 
-area :hover{
-	border-color: #aa0000;
-	background-color: #aa0000;
-	
-}
-	
 #ciudad {	
 	font-size:30px;
 	color:#3700a5 ;
@@ -59,57 +49,62 @@ area :hover{
 	margin: 0;
 }
 
-h2.tit_prov{
-	font-size:30px;
-	color:#3700a5 ;
-	width: auto;
+
+#div_map{
+	float:left;
 }
-h2.tit_nac{
-	font-size:30px;
-	color:#3700a5 ;
-	width: auto;
+
+area :hover{
+	border-color: #aa0000;
+	background-color: #aa0000;
+	
 }
+
+
+
+/* Filtros y botones*/
+div .inputs{
+	width:500px;
+	height: 30px;
+	position: relative;
+	
+}
+
+.inputs{
+	margin-left: 20px;
+
+}
+
+
+
+#h2_g{
+	width: 800px;
+	text-align: center;
+	margin-left: 300px;
+}
+
+#histograma1{
+	margin-left: 30px;
+	width: 1400px;
+	position: relative;
+	overflow: hidden;
+	overflow-x: scroll;
+}
+
+text{
+	font-size: 13px;
+}
+
 .fechas{
 	font-size:20px;
 	color:#002288;
 }
 
-.contenedor{
-	
 
-}
-.inputs{
-	margin-left: 20px;
 
-}
-section{
-	width:50%;
-}
 
-#s_prov{
-/*	background-color: #ff0000;*/
-	float:left;
-	
-	
-	
-}
 
-#s_nac{
-	background-color: #55ffff;
-	float:left;
-	
-}
-
-#histograma1{
-	width: 100%;
-}
-
-#div_map{
-	float:left;
-}
-options{
-	border: 0px
-}
+/* Tabla de valores*/
 .table2{
 	border: 1px solid #000;
 	width: 250px;
@@ -125,32 +120,21 @@ options{
 	border-collapse: collapse;
 }
 
-text{
-	font-size: 12px;
-	
-}
-
-#h2_g{
-	width: auto;
-	text-align: center;
-}
-
-#tit_prov{
-	width: auto;
-	color: black;
-	text-align: center;
-}
-
-#div_map{
-	float:left;
-}
 
 
 
+
+
+
+
+/* titulo del histrograma de curva de valor*/
 #tit_h2{
 	
 	text-align: center;
 }
+
+
+
 	
 
 
