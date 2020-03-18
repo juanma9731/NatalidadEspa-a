@@ -314,7 +314,7 @@ function getGrafComparativa(){
     .attr("y", 0)
     .attr("width", 18)
     .attr("height", 1000)
-    .attr("fill","Red")
+    .attr("fill","Purple")
     
     .attr("x", function(d, i){
       return (i * 42) + 45  // Ancho de barras de 20 más 1 de espacio 
@@ -349,6 +349,7 @@ function getGrafComparativa(){
       .data(anyo)
       .enter()
       .append("text")
+     
       .text(function(d){
         return d;
       })
@@ -358,6 +359,8 @@ function getGrafComparativa(){
     .attr("y", function(d){
       return h ; // + 15
     })
+     
+     
     console.log($("#tp").length )
       if($("#tp").length){
 		 getDataProvincia();
