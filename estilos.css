@@ -1,7 +1,7 @@
 @media  (min-device-width:0px) and  (max-device-width:1400px)  {
 
 html{
-	zoom: 105%;
+	zoom: 90%;
 	
 }
 
@@ -12,17 +12,19 @@ html{
 	margin: auto;
 	float: left;
 	margin-left: 80px;
+	position: relative;
 	
-
 }
 #histograma1{
 	margin-left: 100px;
-	width:1400px; 
+	width: auto;
+	max-width:1400px; 	
 	display: block;
 	margin-top: 50px;
 	position: relative;
 	overflow: hidden;
 	overflow-x: scroll;
+
 }
 
 }
@@ -53,7 +55,8 @@ html{
 
 #histograma1{
 	margin-left: 100px;
-	width:1700px; 
+	max-width:1700px; 
+	width: auto;
 	display: block;
 	margin-top: 50px;
 	position: relative;

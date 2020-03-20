@@ -1,13 +1,13 @@
 
-
+/*
 var anyo = new Array();
 var values = new Array();
-var valuesE = new Array();
+var valuesE = new Array();*/
 var provincia;
 
 
 
-
+/*
 function prueba(){	
 //myObj = JSON.parse(myjson);
 console.log(myjson);
@@ -26,7 +26,7 @@ console.log(myjson);
 document.getElementById("prueba55").innerHTML = myjson.length;
 
 }
-
+*/
 //Ordenar fuente de datos por Código pronvicia para facilitar la búsqueda
 
 function sortMyjsonCodProvincia(){
@@ -77,8 +77,8 @@ function getNombre(p){
 function getDataProvincia(p){
 
 // Vaciamos vectores de valores
-   anyo = [];
-   values = [];
+  var anyo = [];
+  var values = [];
    //sortMyjsonCodProvincia();
    
 // inicializamos la provincia
@@ -92,7 +92,6 @@ function getDataProvincia(p){
 	if (p != undefined && p != provincia  ){
 		provincia = p;
 	}
-
 //Obtenemos posibles filtros
    var h = $("#a_desde").val();
    var d = $("#a_hasta").val();
@@ -127,14 +126,15 @@ function getTabla1(){
 	getDataProvincia(provincia);
 	window.scrollTo(0,1000);
 }
+
 // Pintar gráfico detalle con valores de provincia
 function getGrafProvincia(p){
 	
 	var w = 2000;
 	var h = 300;
 	// Vaciamos vectores de valores
-   anyo = [];
-   values = [];
+    var anyo = [];
+    var values = [];
    //sortMyjsonCodProvincia();
    
 // inicializamos la provincia
@@ -163,18 +163,22 @@ function getGrafProvincia(p){
    for(var i = (2018 - desde); i <= 2018 - hasta;i++){
 		anyo.unshift(myjson[provincia].Data[i].Anyo);
 		values.unshift(myjson[provincia].Data[i].Valor);
+		console.log(i);
 	}
-	
+
 //limpiamos el panel de dibujo
 	$("#histograma1").empty();
+	
+	
+
 //asginamos titulo al gráfico
  document.getElementById("histograma1").innerHTML = '<h2 id="h2_g" >' +getNombre(provincia) + " (Tasa de Natalidad por cada 1000 habitantes)</h2>";
- 
+
 	var svg = d3.select("#histograma1")
       .append('svg')
       .attr("width",w)
       .attr("height", h);
-      
+
       svg.selectAll("rect")
     .data(values)
     .enter()
@@ -227,7 +231,7 @@ function getGrafProvincia(p){
     .attr("y", function(d){
       return h ; // + 15
     })
-    console.log($("#tp").length )
+   // console.log($("#tp").length )
       if($("#tp").length){
 		 getDataProvincia();
 	}
@@ -237,6 +241,7 @@ function getGrafProvincia(p){
   
 
   window.scrollTo(0,700);
+  
 }
 
 //Grafico Detalle Comparativa provincia Vs Total España
@@ -245,9 +250,9 @@ function getGrafComparativa(){
 	var w = 2000;
 	var h = 300;
 	// Vaciamos vectores de valores
-   anyo = [];
-   values = [];
-   valuesE = [];
+   var anyo = [];
+   var  values = [];
+   var valuesE = [];
    //sortMyjsonCodProvincia();
    
 // inicializamos la provincia
@@ -414,20 +419,14 @@ function pintar_eje_grafDetalle(v,s,hh){
 
 
 
-
-
-
-
-
-
 // Pintar gráfico de líneas dinámico
 function getGrafLineasProvincia(p){
 // dimensiones del elemento SVG	
 	var w = 300;
 	var h = 300;
 	// Vaciamos vectores de valores
-   anyo = [];
-   values = [];
+   var anyo = [];
+   var values = [];
 
 // si los filtros están vacios damos un valor por defecto
    	 desde=2018;
