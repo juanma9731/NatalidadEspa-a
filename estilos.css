@@ -5,28 +5,6 @@ html{
 	
 }
 
-#histograma2{
-	height: 500px;
-	width:400px;
-	padding-top: 120px;
-	margin: auto;
-	float: left;
-	margin-left: 80px;
-	position: relative;
-	
-}
-#histograma1{
-	margin-left: 100px;
-	width: auto;
-	max-width:1400px; 	
-	display: block;
-	margin-top: 50px;
-	position: relative;
-	overflow: hidden;
-	overflow-x: scroll;
-
-}
-
 }
 
 @media  (min-device-width:1400px)   {
@@ -35,33 +13,6 @@ html{
 	zoom: 120%;
 	
 	
-}
-
-#histograma2{
-	height: 500px;
-	width:400px;
-	padding-top: 120px;
-	margin: auto;
-	float: left;
-	margin-left: 200px;
-	
-
-}
-
-#div_map{
-	
-	padding-left: 80px;
-}
-
-#histograma1{
-	margin-left: 100px;
-	max-width:1700px; 
-	width: auto;
-	display: block;
-	margin-top: 50px;
-	position: relative;
-	overflow: hidden;
-	overflow-x: scroll;
 }
 
 }
@@ -84,13 +35,28 @@ div{
 
 #contenedor_principal{
 	width: 100%;
-	height: 800px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 50px; /* Set gap between map and histograma2 */
 }
+
 #div_map{	
-	margin-left: 80px;
-	float: left;
-	
+	margin-left: 0;
+	flex: 0 0 auto;
+	min-width: 400px;
 }
+
+#linea_evolucion {
+    flex: 1;
+    margin-left: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 
 
 area :hover{
@@ -167,9 +133,117 @@ text{
 	text-align: center;
 }
 
+/* Modernización de estilos */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background: #4facfe;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #00f2fe;
+}
+
+.td2 {
+    border: 2px solid #000;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#tit_h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #4facfe;
+    margin-bottom: 1rem;
+}
+
+#contenedor_principal {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+}
+
+#div_map {
+    flex: 0 0 auto;
+    margin-left: 0;
+    min-width: 400px;
+}
+
+#histograma2 {
+    flex: 0 0 auto;
+    margin-left: 0;
+    max-width: 500px;
+    min-width: 300px;
+    width: 400px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 500px;
+    box-sizing: border-box;
+}
+
+/* Elimina floats y posiciones heredadas que puedan causar conflicto */
+#histograma2, #div_map {
+    float: none !important;
+    position: static !important;
+}
+
+@media (max-width: 900px) {
+  #contenedor_principal {
+    flex-direction: column;
+    gap: 0;
+  }
+  #histograma2 {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: 300px;
+  }
+}
 
 
-	
+
+
 
 
 
